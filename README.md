@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="public/logo512.png" alt="React Forms Challenge Logo" width="200"/>
+  <h1>React Forms Challenge</h1>
+  <p>Una colección de ejercicios prácticos para aprender React</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+</div>
 
-## Available Scripts
+## 📋 Acerca del Proyecto
 
-In the project directory, you can run:
+Este proyecto es una colección de ejercicios prácticos diseñados para aprender y mejorar habilidades en React. Cada ejercicio se enfoca en diferentes aspectos fundamentales del desarrollo con React, incluyendo:
 
-### `npm start`
+- Formularios y manejo de estado
+- Routing y navegación
+- Componentes y props
+- Hooks y ciclo de vida
+- Estilos y responsive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Ejercicio Actual
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Ejercicio 1: Formulario de Inicio de Sesión Básico
 
-### `npm test`
+**Duración**: 3 días + 1 día para extras
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Requisitos Mínimos (3 días):
+- ✅ Crear una aplicación React con un formulario de login
+- ✅ Implementar campos para:
+  - Email (con label)
+  - Password (con label)
+- ✅ Botón de "Iniciar Sesión"
+- ✅ Mostrar datos en consola al enviar
+- ✅ Usar useState para manejar el estado
 
-### `npm run build`
+#### Extras (1 día):
+- ✅ Estilización con CSS
+- ✅ Efectos hover en botones
+- ✅ Diseño responsive
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tecnologías Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 18
+- CSS3 (Variables CSS, Flexbox)
+- JavaScript ES6+
+- Create React App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🛠️ Instalación
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clona este repositorio:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/NoeOsorio/react-forms-storybook.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Instala las dependencias:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+3. Inicia la aplicación:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
