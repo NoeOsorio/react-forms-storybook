@@ -1,0 +1,203 @@
+@import "../../shared/variables.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-md);
+  background-color: var(--color-background);
+}
+
+.form {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form h2 {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-xl);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  transition: all var(--transition-normal);
+  box-sizing: border-box;
+  padding-right: 35px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group input:focus-visible,
+.form-group select:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.input-error {
+  border-color: var(--color-error) !important;
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+}
+
+/* Sobrescribir todos los estados de focus cuando hay error */
+.input-error:focus,
+.input-error:focus-visible {
+  border-color: var(--color-error) !important;
+  box-shadow: var(--shadow-error) !important;
+}
+
+/* Estilos para la sección de intereses */
+.interests-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.interests-section > label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: var(--spacing-md);
+  height: var(--spacing-md);
+  cursor: pointer;
+  accent-color: var(--color-primary);
+  box-sizing: border-box;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* Estilos para el selector de fecha */
+input[type="date"] {
+  font-family: var(--font-family-base);
+  cursor: pointer;
+}
+
+/* Estilos para el botón */
+button {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  box-sizing: border-box;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+button:disabled {
+  background-color: var(--color-text-light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Estilos para el select de género */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-md) center;
+  background-size: var(--spacing-md);
+  padding-right: var(--spacing-xl);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .form {
+    padding: var(--spacing-lg);
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group input,
+  .form-group select,
+  button {
+    padding: var(--spacing-sm);
+  }
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.required-label::after {
+  content: "*";
+  color: #ff4d4f;
+  margin-left: 4px;
+}

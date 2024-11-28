@@ -3,6 +3,10 @@
   <h1>React Forms Challenge</h1>
   <p>Una colección de ejercicios prácticos para aprender React</p>
 
+  <p>
+  Vamos a enfocarnos en el manejo de formularios, validaciones y feedback visual. 
+  </p>
+
   ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -102,6 +106,34 @@ Este proyecto es una colección de ejercicios prácticos diseñados para aprende
   - Estilización con CSS
   - Organización clara de campos
   - Placeholders informativos
+
+### Ejercicio 4: Validación Avanzada sin Librerías
+
+**Duración**: 3 días + 1 día para extras
+
+#### Requisitos Mínimos (3 días):
+- ✅ Implementar validaciones avanzadas:
+  - Formato de email con dominio válido
+  - Contraseña con requisitos específicos:
+    - Mínimo 8 caracteres
+    - Combinación de letras y números
+  - Mensajes de error por campo
+  - Botón de submit condicionalmente deshabilitado
+- ✅ Gestión de estado:
+  - Estado local para cada campo
+  - Actualización en tiempo real
+  - Manejo de errores individualizado
+
+#### Extras (1 día):
+- ✅ Validaciones mejoradas:
+  - Verificación de dominio de email
+  - Requisitos adicionales de contraseña
+- ⬜ Mejoras visuales:
+  - Indicadores de fortaleza de contraseña
+  - Feedback visual instantáneo
+- ✅ Accesibilidad:
+  - Mensajes de error para lectores de pantalla
+  - Navegación por teclado optimizada
 
 ## 🎨 Características Añadidas
 
