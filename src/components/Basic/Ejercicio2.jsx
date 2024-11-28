@@ -1,7 +1,7 @@
 import "./errorHandleLogin.css";
 import { useState } from "react";
 
-export default function BasicLogin() {
+export default function ValidatedLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formErrors, setFormErrors] = useState({});
