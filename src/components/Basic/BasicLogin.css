@@ -1,87 +1,19 @@
+/* Importar variables globales */
+@import '../../shared/variables.css';
 /*
 * Estilos para el formulario básico de login
-* Autor: Tu Nombre
-* Versión: 1.0
+* Autor: Noe Osorio
+* Versión: 1.1
 *
 * Estructura del archivo:
-* 1. Variables globales
-* 2. Contenedor principal
-* 3. Formulario
-* 4. Elementos del formulario
+* 1. Contenedor principal
+* 2. Formulario
+* 3. Elementos del formulario
 *    - Inputs
 *    - Labels
 *    - Botones
-* 5. Media Queries
+* 4. Media Queries
 */
-
-/* ========================================
-   1. Variables Globales
-   ======================================== */
-/*
-* Las variables CSS se definen usando '--nombre-variable'
-* Se declaran dentro de :root para hacerlas globalmente disponibles
-* Uso: var(--nombre-variable)
-*/
-:root {
-  /* Colores principales 
-   * Definimos la paleta de colores base para mantener consistencia
-   * --color-primary: Color principal de la aplicación
-   * --color-primary-dark: Variante oscura del color principal para hover
-   * --color-text: Color base para textos
-   * --color-border: Color para bordes de elementos
-   * --color-white: Color blanco para fondos
-   */
-  --color-primary: #d6f35c;
-  --color-primary-dark: #c8e550;
-  --color-text: #1a1f36;
-  --color-border: #e3e8ee;
-  --color-white: #ffffff;
-  
-  /* Sombras 
-   * Definimos diferentes niveles de elevación usando box-shadow
-   * --shadow-sm: Sombra sutil para elementos pequeños
-   * --shadow-md: Sombra media para cards y elementos destacados
-   * --shadow-focus: Sombra especial para estados focus
-   */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-focus: 0 0 0 1px var(--color-primary);
-  
-  /* Bordes 
-   * Radios de borde consistentes para diferentes elementos
-   * --border-radius-sm: Para elementos pequeños como botones e inputs
-   * --border-radius-md: Para elementos más grandes como cards
-   */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  
-  /* Espaciado 
-   * Sistema de espaciado consistente para márgenes y padding
-   * --spacing-xs: Espaciado muy pequeño (8px)
-   * --spacing-sm: Espaciado pequeño (12px)
-   * --spacing-md: Espaciado medio (16px)
-   * --spacing-lg: Espaciado grande (24px)
-   * --spacing-xl: Espaciado extra grande (40px)
-   */
-  --spacing-xs: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 40px;
-  
-  /* Tipografía 
-   * Sistema tipográfico base
-   * --font-family-base: Stack de fuentes del sistema para mejor rendimiento
-   * --font-size-sm: Tamaño pequeño con clamp para responsividad
-   * --font-size-base: Tamaño base con clamp para responsividad
-   * 
-   * clamp() permite definir un valor que escala entre un mínimo y máximo
-   * clamp(min, preferido, max)
-   */
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-size-sm: clamp(12px, 1.5vw, 14px);
-  --font-size-base: clamp(14px, 2vw, 16px);
-}
 
 /* ========================================
    2. Contenedor Principal
@@ -113,6 +45,7 @@
   margin: var(--spacing-lg);
   
   /* Estilos visuales */
+  box-sizing: border-box;
   background: var(--color-white);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-md);
@@ -125,8 +58,8 @@
 /* --- 4.1 Inputs --- */
 .basic-login-form > input {
   /* Dimensiones y espaciado */
-  width: 70vw;
-  max-width: 80%;
+  width: 100%;
+  box-sizing: border-box;
   padding: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
   
@@ -163,8 +96,8 @@
 /* --- 4.3 Botones --- */
 .basic-login-form button {
   /* Dimensiones y espaciado */
-  width: 70vw;
-  max-width: 80%;
+  width: 100%;
+  box-sizing: border-box;
   padding: var(--spacing-sm);
   margin-top: var(--spacing-md);
   
@@ -180,7 +113,7 @@
   
   /* Interactividad */
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition-normal);
 }
 
 /* Estado hover del botón */

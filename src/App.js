@@ -1,9 +1,10 @@
 import './App.css';
-import BasicLogin from './components/Basic/BasicLogin';
+import ErrorHandleLogin from './components/Basic/ErrorHandleLogin';
 function App() {
   return (
     <div className="App">
-      <BasicLogin />
+      {/* <BasicLogin /> */}
+      <ErrorHandleLogin />
     </div>
   );
 }

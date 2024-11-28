@@ -1,0 +1,242 @@
+/*
+* Estilos para el Formulario de Login con Validación
+* 
+* Este archivo contiene los estilos para el formulario de login
+* con manejo de errores y estados de validación.
+* 
+* CONTENIDO:
+* 1. Layout y Estructura
+* 2. Elementos del Formulario
+* 3. Estados y Validación
+* 4. Responsive Design
+*/
+
+/* Importar variables globales */
+@import "../../shared/variables.css";
+
+/* ====================
+   1. LAYOUT Y ESTRUCTURA
+   ==================== */
+
+/* --- Contenedor Principal ---
+ * Centrado vertical y horizontal
+ * Fondo con gradiente
+ */
+.container {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  
+  /* Espaciado y fondo */
+  padding: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  
+  /* Tipografía */
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+
+/* --- Formulario Base ---
+ * Contenedor del formulario con estilos base
+ */
+.basic-login-form {
+  /* Dimensiones */
+  width: 70vw;
+  padding: clamp(var(--spacing-lg), 5vw, var(--spacing-xl));
+  margin: var(--spacing-lg);
+  
+  /* Estilos visuales */
+  background: var(--color-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: start;
+}
+
+/* ====================
+   2. ELEMENTOS DEL FORMULARIO
+   ==================== */
+
+/* --- Campos de Entrada ---
+ * Estilos base para inputs
+ */
+.basic-login-form > input {
+  /* Layout */
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  
+  /* Estilos visuales */
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-normal);
+}
+
+/* Placeholder */
+input::placeholder {
+  color: var(--color-border);
+}
+
+/* --- Etiquetas ---
+ * Estilos para labels de campos
+ */
+.basic-login-form > label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* --- Botones ---
+ * Estilos para botones de acción
+ */
+.basic-login-form button {
+  /* Layout */
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  
+  /* Estilos visuales */
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  
+  /* Tipografía */
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  
+  /* Interactividad */
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+/* Hover del botón */
+.basic-login-form button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ====================
+   3. ESTADOS Y VALIDACIÓN
+   ==================== */
+
+/* --- Estados del Botón ---
+ * Estilos para botón deshabilitado
+ */
+button[disabled] {
+  background-color: var(--color-text-light);
+  cursor: not-allowed;
+  color: var(--color-white);
+  transform: none;
+}
+
+button[disabled]:hover {
+  background-color: var(--color-text-light);
+  box-shadow: none;
+  transform: none;
+}
+
+/* --- Mensajes de Error ---
+ * Estilos para feedback de error
+ */
+.error-message {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+  transition: var(--transition-normal);
+}
+
+/* --- Estados de Input ---
+ * Estilos para diferentes estados de validación
+ */
+.input-error {
+  border-color: var(--color-error) !important;
+  box-shadow: var(--shadow-error);
+  margin-bottom: 0px !important;
+}
+
+.input-error:hover,
+.input-error:focus,
+.input-error:focus-visible {
+  border-color: var(--color-error) !important;
+  outline: none;
+}
+
+.input-success:hover,
+.input-success:focus,
+.input-success:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+/* --- Iconos de Validación ---
+ * Posicionamiento de iconos de estado
+ */
+.validation-icon {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: var(--transition-normal);
+}
+
+/* --- Campos Requeridos ---
+ * Estilos para indicadores de campo requerido
+ */
+.required-mark {
+  color: var(--color-error);
+  margin-left: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+/* ====================
+   4. RESPONSIVE DESIGN
+   ==================== */
+
+/* Móvil */
+@media screen and (max-width: 480px) {
+  .basic-login-form {
+    margin: var(--spacing-sm);
+  }
+
+  .container {
+    padding: var(--spacing-xs);
+  }
+}
+
+/* Móvil pequeño */
+@media screen and (max-width: 320px) {
+  .basic-login-form {
+    padding: var(--spacing-sm);
+  }
+
+  .basic-login-form > input,
+  .basic-login-form button {
+    padding: var(--spacing-xs);
+  }
+}
+
+/* Pantallas grandes */
+@media screen and (min-width: 1200px) {
+  .basic-login-form {
+    padding: var(--spacing-xl);
+  }
+}

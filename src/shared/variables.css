@@ -1,0 +1,124 @@
+/*
+* Variables Globales CSS
+* 
+* Este archivo centraliza todas las variables de estilo de la aplicación.
+* Organizado por categorías para facilitar el mantenimiento y aprendizaje.
+* 
+* CONTENIDO:
+* 1. Colores
+*    - Tema principal
+*    - Estados y feedback
+* 2. Tipografía
+*    - Familias de fuentes
+*    - Tamaños
+* 3. Espaciado y Layout
+*    - Márgenes y padding
+*    - Bordes y radios
+* 4. Efectos
+*    - Sombras
+*    - Transiciones
+* 5. Z-index
+*/
+
+:root {
+  /* ====================
+     1. COLORES
+     ==================== */
+  
+  /* --- Colores del Tema --- 
+   * Paleta principal de la aplicación
+   * Usar --color-primary para elementos principales
+   * -dark y -light para variaciones y estados
+   */
+  --color-primary: #d6f35c;
+  --color-primary-dark: #c8e550;
+  --color-primary-light: #e0f584;
+  --color-text: #1a1f36;
+  --color-text-light: #4f566b;
+  --color-border: #e3e8ee;
+  --color-white: #ffffff;
+  --color-background: #f7fafc;
+  
+  /* --- Colores de Estado ---
+   * Usar para feedback al usuario
+   * error: campos inválidos, errores
+   * success: validaciones exitosas
+   * warning: alertas, precauciones
+   * info: mensajes informativos
+   */
+  --color-error: #ff4d4f;
+  --color-success: #52c41a;
+  --color-warning: #faad14;
+  --color-info: #1890ff;
+  
+  /* ====================
+     2. TIPOGRAFÍA
+     ==================== */
+  
+  /* --- Familias de Fuentes ---
+   * Stack de fuentes del sistema para mejor rendimiento
+   */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* --- Tamaños de Fuente ---
+   * Usando clamp() para responsive design
+   * min-size, preferred-size, max-size
+   */
+  --font-size-xs: clamp(10px, 1vw, 12px);    /* Texto muy pequeño */
+  --font-size-sm: clamp(12px, 1.5vw, 14px);  /* Texto pequeño, labels */
+  --font-size-base: clamp(14px, 2vw, 16px);  /* Texto base, párrafos */
+  --font-size-lg: clamp(16px, 2.5vw, 18px);  /* Títulos pequeños */
+  --font-size-xl: clamp(20px, 3vw, 24px);    /* Títulos grandes */
+  
+  /* ====================
+     3. ESPACIADO Y LAYOUT
+     ==================== */
+  
+  /* --- Espaciado ---
+   * Sistema de espaciado consistente
+   * Usar para márgenes y padding
+   */
+  --spacing-xs: 4px;   /* Espaciado mínimo */
+  --spacing-sm: 8px;   /* Espaciado pequeño */
+  --spacing-md: 16px;  /* Espaciado medio */
+  --spacing-lg: 24px;  /* Espaciado grande */
+  --spacing-xl: 32px;  /* Espaciado extra grande */
+  --spacing-xxl: 48px; /* Espaciado máximo */
+  
+  /* --- Bordes ---
+   * Radios y anchos consistentes
+   */
+  --border-width: 1px;
+  --border-radius-sm: 4px;   /* Botones, inputs */
+  --border-radius-md: 8px;   /* Cards, modales */
+  --border-radius-lg: 16px;  /* Elementos grandes */
+  
+  /* ====================
+     4. EFECTOS
+     ==================== */
+  
+  /* --- Sombras ---
+   * Sistema de elevación con sombras
+   */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);   /* Elevación sutil */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);   /* Elevación media */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1); /* Elevación alta */
+  --shadow-focus: 0 0 0 2px var(--color-primary-light); /* Estado focus */
+  --shadow-error: 0 0 0 2px rgba(255, 77, 79, 0.2);     /* Estado error */
+  
+  /* --- Transiciones ---
+   * Duraciones estándar para animaciones
+   */
+  --transition-fast: 150ms ease;    /* Micro-interacciones */
+  --transition-normal: 250ms ease;  /* Transiciones estándar */
+  --transition-slow: 350ms ease;    /* Transiciones elaboradas */
+  
+  /* ====================
+     5. Z-INDEX
+     ==================== */
+  
+  /* Capas de la aplicación */
+  --z-index-dropdown: 1000;  /* Menús desplegables */
+  --z-index-modal: 2000;     /* Ventanas modales */
+  --z-index-tooltip: 3000;   /* Tooltips y popovers */
+}
