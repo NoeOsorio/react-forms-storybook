@@ -79,24 +79,17 @@ export default function ValidatedSignUp() {
   // Función principal de validación que maneja todos los tipos de campos
   const validateForm = (id, value, subFormData) => {
     const errors = { ...formErrors };
-    console.log(id, value);
     // Serie de validaciones específicas para cada tipo de campo
     if (id === "email") {
       if (!value) {
         errors[id] = formErrorsMessages[id].required;
       } else if (!validateEmail(value)) {
-        console.log(
-          "email invalid",
-          formErrorsMessages[id].invalid,
-          validateEmail(value)
-        );
         errors[id] = formErrorsMessages[id].invalid;
       } else {
         delete errors[id];
       }
     } else if (id === "password") {
       if (!value) {
-        console.log("password required", formErrorsMessages[id].required);
         errors[id] = formErrorsMessages[id].required;
       } else if (!validatePassword(value)) {
         errors[id] = formErrorsMessages[id].invalid;
@@ -169,7 +162,6 @@ export default function ValidatedSignUp() {
   const validateEmail = (email) => {
     /// Another way to validate email:
     // return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    console.log(email, email.includes("@"), email.includes("."));
     return email.includes("@") && email.includes(".");
   };
 
@@ -179,6 +171,7 @@ export default function ValidatedSignUp() {
     const hasAtLeastOneUppercase = /[A-Z]/.test(password);
     const hasAtLeastOneLowercase = /[a-z]/.test(password);
     const hasNumbers = /\d/.test(password);
+    
     return (
       password.length >= minLength &&
       hasNumbers &&

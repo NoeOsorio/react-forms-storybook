@@ -8,7 +8,7 @@
  * 4. Manejo de eventos del formulario
  */
 
-import './BasicLogin.css';
+import './ejercicio1.css';
 // useState es un Hook de React que permite añadir estado a componentes funcionales
 import { useState } from 'react';
 
