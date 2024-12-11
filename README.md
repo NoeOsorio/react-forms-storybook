@@ -29,11 +29,11 @@ Este proyecto es una colección de ejercicios prácticos diseñados para aprende
 
 | Ejercicio | Descripción | Duración | Estado |
 |-----------|-------------|----------|---------|
-| [Ejercicio 1](src/components/Basic/Ejercicio1/README.md) | Formulario de Inicio de Sesión Básico | 4 días | ✅ |
-| [Ejercicio 2](src/components/Basic/Ejercicio2/README.md) | Validación Básica de Formularios | 4 días | ✅ |
-| [Ejercicio 3](src/components/Basic/Ejercicio3/README.md) | Formulario de Registro con Diferentes Tipos de Inputs | 4 días | ✅ |
-| [Ejercicio 4](src/components/Basic/Ejercicio4/README.md) | Validación Avanzada sin Librerías | 4 días | ✅ |
-| [Ejercicio 5](src/components/Basic/Ejercicio5/README.md) | Creación de Componentes Reutilizables Básicos | 4 días | ✅ |
+| [Ejercicio 1](src/ejercicios/Ejercicio1/README.md) | Formulario de Inicio de Sesión Básico | 4 días | ✅ |
+| [Ejercicio 2](src/ejercicios/Ejercicio2/README.md) | Validación Básica de Formularios | 4 días | ✅ |
+| [Ejercicio 3](src/ejercicios/Ejercicio3/README.md) | Formulario de Registro con Diferentes Tipos de Inputs | 4 días | ✅ |
+| [Ejercicio 4](src/ejercicios/Ejercicio4/README.md) | Validación Avanzada sin Librerías | 4 días | ✅ |
+| [Ejercicio 5](src/ejercicios/Ejercicio5/README.md) | Creación de Componentes Reutilizables Básicos | 4 días | ✅ |
 
 </div>
 
