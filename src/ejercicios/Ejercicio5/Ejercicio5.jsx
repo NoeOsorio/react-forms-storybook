@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { CheckCircleFilled, CloseCircleFilled } from "@ant-design/icons";
-import { TextInput, Select, Checkbox } from "./Inputs";
+import { TextInput, Select, Checkbox } from "../../components/Inputs";
 import "./ejercicio5.css";
 
 // Estado inicial del formulario - todos los campos comienzan vacíos

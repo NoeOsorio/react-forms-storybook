@@ -1,4 +1,4 @@
-import "./errorHandleLogin.css";
+import "./ejercicio2.css";
 import { useState } from "react";
 
 export default function ValidatedLogin() {

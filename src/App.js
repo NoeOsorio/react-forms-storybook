@@ -1,9 +1,9 @@
 import './App.css';
-import SignUpWithCustomInputs from './components/Inter/Ejercicio5';
+import { Ejercicio5 } from './ejercicios';
 function App() {
   return (
     <div className="App">
-      <SignUpWithCustomInputs />
+      <Ejercicio5 />
     </div>
   );
 }
