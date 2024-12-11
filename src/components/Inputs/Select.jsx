@@ -2,6 +2,34 @@ import { useState, useRef, useEffect } from "react";
 import "./inputs.css";
 import { DownOutlined } from '@ant-design/icons';
 
+/**
+ * Componente personalizado de selección desplegable.
+ * 
+ * @component
+ * @example
+ * // Uso básico:
+ * <Select
+ *   id="country"
+ *   label="País"
+ *   value={selectedCountry}
+ *   onChange={handleCountryChange}
+ *   options={[
+ *     { value: 'mx', label: 'México' },
+ *     { value: 'us', label: 'Estados Unidos' }
+ *   ]}
+ *   required
+ * />
+ * 
+ * @param {Object} props - Propiedades del componente
+ * @param {string} props.id - Identificador único del select
+ * @param {string} props.label - Etiqueta descriptiva
+ * @param {string} props.value - Valor seleccionado actualmente
+ * @param {function} props.onChange - Manejador de cambios
+ * @param {Array<{value: string, label: string}>} props.options - Opciones disponibles
+ * @param {boolean} props.required - Indica si es obligatorio
+ * @param {string} props.error - Mensaje de error a mostrar
+ * @returns {JSX.Element} Componente de selección personalizado
+ */
 export default function Select({
   id,
   label,
@@ -11,13 +39,18 @@ export default function Select({
   required,
   error,
 }) {
+  // Estado para controlar si el dropdown está abierto
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Estado para mantener la opción seleccionada
   const [selectedOption, setSelectedOption] = useState(
     options.find(opt => opt.value === value) || options[0]
   );
+  
+  // Referencia al elemento select para detectar clicks fuera
   const selectRef = useRef(null);
 
-  // Cierra el dropdown cuando se hace click fuera
+  // Efecto para cerrar el dropdown cuando se hace click fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (selectRef.current && !selectRef.current.contains(event.target)) {
@@ -29,10 +62,12 @@ export default function Select({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Manejador de selección de opción
   const handleSelect = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
-    onChange({ target: { id, value: option.value } }); // Mantiene la misma estructura del evento
+    // Simula el evento de cambio para mantener consistencia con inputs normales
+    onChange({ target: { id, value: option.value } });
   };
 
   return (
